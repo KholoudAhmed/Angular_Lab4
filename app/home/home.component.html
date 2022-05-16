@@ -1,0 +1,19 @@
+<!-- <p>home works!</p> -->
+<h1 class="title">
+    {{storeName}}
+</h1>
+<img [src]="imageSrc" [alt]="imageAlt" />
+<h3 class="offer">
+    {{"We offer an explicit discount of:" +  Discount}}
+</h3>
+
+<!-- ********************************************Q1 and Q of percent**************************************************** -->
+<h3 *ngIf="Discount !== 'No Discount' ; then show ; else hidden "></h3>
+<ng-template #show>
+    <h3> {{Discount | percent}}</h3>
+</ng-template>
+
+<ng-template #hidden>
+
+</ng-template>
+<br>

@@ -1,0 +1,18 @@
+<!-- <p>users works!</p> -->
+<h1>Available Users</h1>
+<div >
+    <table class="table" id='tab'>
+        <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+        </thead>
+        <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+{{somethingWrong}}

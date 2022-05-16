@@ -1,0 +1,27 @@
+
+
+<!-- ***************************************Q3=table********************************************************** -->
+<button (click)="BtnClicked()">Buy</button>
+<div *ngIf="flag; then showTable ; else hiddenTable "></div>
+
+<ng-template #showTable>
+<table>
+    <thead>
+        <th>Item  </th>
+        <th>Price </th>
+		<th>Quantity </th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of items">
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+			<td>{{item.Quantity}}</td>
+
+        </tr>
+    </tbody>
+</table>
+</ng-template>
+
+<ng-template #hiddenTable>
+	<h1 class="thnQtext" >Thanks for purchasing from our Store, {{nameOfClient}}</h1>
+</ng-template>
